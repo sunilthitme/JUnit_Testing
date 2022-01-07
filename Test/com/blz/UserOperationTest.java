@@ -45,8 +45,19 @@ public class UserOperationTest {
         boolean result = userOperation.phoneNumber("7219221821");
         Assert.assertEquals(true, result);
     }
+    @Test
     public void givenPhoneNumber_WhenNotProper_ShouldReturnFalse() {
         boolean result = userOperation.phoneNumber("721922182");
+        Assert.assertEquals(false, result);
+    }
+    @Test
+    public void givenPPassword_WhenProper_ShouldReturnTrue() {
+        boolean result = userOperation.password("Sunil@90");
+        Assert.assertEquals(true, result);
+    }
+    @Test
+    public void givenPassword_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userOperation.password("Sunil@2222");
         Assert.assertEquals(false, result);
     }
 }
