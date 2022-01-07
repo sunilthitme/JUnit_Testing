@@ -24,4 +24,10 @@ public class UserOperation {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
+    public boolean phoneNumber (String phoneNumber){
+        String regex = "^[6789]{1}[0-9]{9}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
+    }
 }
