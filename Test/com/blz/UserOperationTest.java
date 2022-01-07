@@ -40,4 +40,13 @@ public class UserOperationTest {
         boolean result = userOperation.email("sunil&thitame@gmail.com");
         Assert.assertEquals(false, result);
     }
+    @Test
+    public void givenPhoneNumber_WhenProper_ShouldReturnTrue() {
+        boolean result = userOperation.phoneNumber("7219221821");
+        Assert.assertEquals(true, result);
+    }
+    public void givenPhoneNumber_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userOperation.phoneNumber("721922182");
+        Assert.assertEquals(false, result);
+    }
 }
