@@ -29,5 +29,15 @@ public class UserOperationTest {
         Assert.assertEquals(false, result);
 
     }
-}
+    @Test
+    public void givenEmail_WhenProper_ShouldReturnTrue() {
+        boolean result = userOperation.email("thitamesunil808@gmail.com");
+        Assert.assertEquals(true, result);
+    }
 
+    @Test
+    public void givenEmail_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userOperation.email("sunil&thitame@gmail.com");
+        Assert.assertEquals(false, result);
+    }
+}
