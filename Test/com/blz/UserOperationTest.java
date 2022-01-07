@@ -5,10 +5,29 @@ import org.junit.Test;
 
 public class UserOperationTest {
 
-        UserOperation userRegistration = new UserOperation();
-        @Test
-        public void givenFirstName_WhenProper_ShouldReturnTrue() {
-            boolean result = userRegistration.firstName("Sunil");
-            Assert.assertEquals(true, result);
-        }
+    UserOperation userOperation = new UserOperation();
+    @Test
+    public void givenFirstName_WhenProper_ShouldReturnTrue() {
+        boolean result = userOperation.firstName("Sunil");
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
+    public void givenFirstName_WhenNotProper_ShouldReturnFlase() {
+        boolean result = userOperation.firstName("sunil");
+        Assert.assertEquals(false, result);
+    }
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTrue() {
+        boolean result = userOperation.lastName("Thitame");
+        Assert.assertEquals(true, result);
+    }
+
+    @Test
+    public void givenLastName_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userOperation.lastName("thitame");
+        Assert.assertEquals(false, result);
+
+    }
 }
+
